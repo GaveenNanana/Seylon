@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journeys — Seylon</title>
+  <meta name="description" content="Three ways to experience Ceylon — luxury, cultural heritage, and untamed adventure.">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/modal.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="navbar__logo">Sey<span>lon</span></a>
+    <ul class="navbar__links">
+      <li><a href="journeys.html" class="active">Journeys</a></li>
+      <li><a href="how-it-works.html">How it works</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="navbar__cta" onclick="openQuiz()">Begin your journey</button>
+    <button class="navbar__hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__close" onclick="closeMobileMenu()">✕</button>
+    <a href="journeys.html"     onclick="closeMobileMenu()">Journeys</a>
+    <a href="how-it-works.html" onclick="closeMobileMenu()">How it works</a>
+    <a href="about.html"        onclick="closeMobileMenu()">About</a>
+    <a href="contact.html"      onclick="closeMobileMenu()">Contact</a>
+  </div>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero__eyebrow eyebrow">Our journeys</div>
+    <h1 class="page-hero__title">Three ways to <em>discover Ceylon</em></h1>
+    <p class="page-hero__body">Every journey begins with who you are. We've designed three distinct paths through the island — each one a different kind of encounter with Sri Lanka's soul.</p>
+  </div>
+
+  <!-- Journey 1 -->
+  <section style="display:grid;grid-template-columns:1fr 1fr;border-bottom:.5px solid var(--border);">
+    <div style="padding:4rem 3rem;border-right:.5px solid var(--border);">
+      <div class="journey-card__tag" style="margin-bottom:1.5rem;">Romance &amp; luxury</div>
+      <h2 style="font-family:var(--font-serif);font-size:clamp(36px,4vw,52px);font-weight:300;color:var(--sand);margin-bottom:1rem;line-height:1.08;">The <em style="font-style:italic;color:var(--gold);">Private Ceylon</em></h2>
+      <p style="font-size:14px;line-height:1.85;color:var(--sand-55);margin-bottom:2rem;font-weight:300;max-width:460px;">Colonial tea bungalows, sunset whale watching off Mirissa, private dinners within Galle Fort's ancient walls. For those who want the island entirely to themselves — unhurried, intimate, unmistakably Ceylon.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem;padding:1.5rem;background:var(--gold-05);border:.5px solid var(--border);">
+        <div><div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand-35);margin-bottom:.3rem;">Duration</div><div style="font-family:var(--font-serif);font-size:20px;font-weight:300;color:var(--sand);">8–14 days</div></div>
+        <div><div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand-35);margin-bottom:.3rem;">From</div><div style="font-family:var(--font-serif);font-size:20px;font-weight:300;color:var(--gold);">$3,200</div></div>
+        <div><div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand-35);margin-bottom:.3rem;">Style</div><div style="font-family:var(--font-serif);font-size:20px;font-weight:300;color:var(--sand);">Private</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem;">
+        <span class="tag">Private villa</span><span class="tag">Curated dining</span><span class="tag">Hidden beaches</span><span class="tag">Exclusive access</span>
+      </div>
+      <button class="btn btn--primary" onclick="openQuiz()">Start planning →</button>
+    </div>
+    <div style="padding:4rem 3rem;background:var(--forest-deep);">
+      <div style="font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--sand-25);margin-bottom:1.5rem;">Sample highlights</div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;align-items:flex-start;">
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Colombo</div>
+          <div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Arrival &amp; Galle Face</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">Private transfer, colonial promenade, Ministry of Crab</div></div>
+        </div>
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;align-items:flex-start;">
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Sigiriya</div>
+          <div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Rock Fortress at dawn</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">Private guide, tank-side villa, private dinner by the water</div></div>
+        </div>
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;align-items:flex-start;">
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Kandy</div>
+          <div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Temple of the Tooth</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">Dawn puja, private tea estate, Kandyan ceremony</div></div>
+        </div>
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;align-items:flex-start;">
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Ella</div>
+          <div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Scenic train &amp; Nine Arches</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">Observation car, hilltop resort, private sunset hike</div></div>
+        </div>
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;align-items:flex-start;">
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">South</div>
+          <div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Whale watching &amp; Mirissa</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">Private boat, Amanwella villa, beach lunch</div></div>
+        </div>
+        <div style="padding:1.2rem 0;display:flex;gap:1rem;align-items:flex-start;">
+          <div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Galle</div>
+          <div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Fort &amp; rampart sunset</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">Amangalla, artisan studios, last golden evening</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey 2 -->
+  <section style="display:grid;grid-template-columns:1fr 1fr;border-bottom:.5px solid var(--border);">
+    <div style="padding:4rem 3rem;background:var(--forest-deep);">
+      <div style="font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--sand-25);margin-bottom:1.5rem;">Sample highlights</div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;"><div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Anuradhapura</div><div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Ancient Sacred City</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">2,500-year-old ruins, the sacred Bodhi tree</div></div></div>
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;"><div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Sigiriya</div><div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Lion Rock &amp; Frescoes</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">Private archaeologist guide, Pidurangala at sunset</div></div></div>
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;"><div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Dambulla</div><div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Cave Temple</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">150 gilded Buddhas in five sacred caves</div></div></div>
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;"><div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Kandy</div><div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Sacred Tooth Temple</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">Dawn puja, Kandyan arts, royal lake walk</div></div></div>
+        <div style="padding:1.2rem 0;display:flex;gap:1rem;"><div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Galle</div><div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Dutch Fort</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">Colonial lanes, rampart sunset, living history</div></div></div>
+      </div>
+    </div>
+    <div style="padding:4rem 3rem;border-left:.5px solid var(--border);">
+      <div class="journey-card__tag" style="margin-bottom:1.5rem;">Heritage &amp; culture</div>
+      <h2 style="font-family:var(--font-serif);font-size:clamp(36px,4vw,52px);font-weight:300;color:var(--sand);margin-bottom:1rem;line-height:1.08;">The <em style="font-style:italic;color:var(--gold);">Ancient Way</em></h2>
+      <p style="font-size:14px;line-height:1.85;color:var(--sand-55);margin-bottom:2rem;font-weight:300;max-width:460px;">Sigiriya at dawn before the crowds. Sacred temples in Anuradhapura where monks still pray beside 2,500-year-old ruins. Kandyan drum ceremonies heard only by those who know to ask. Ceylon's history, lived not observed.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem;padding:1.5rem;background:var(--gold-05);border:.5px solid var(--border);">
+        <div><div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand-35);margin-bottom:.3rem;">Duration</div><div style="font-family:var(--font-serif);font-size:20px;font-weight:300;color:var(--sand);">10–16 days</div></div>
+        <div><div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand-35);margin-bottom:.3rem;">From</div><div style="font-family:var(--font-serif);font-size:20px;font-weight:300;color:var(--gold);">$1,800</div></div>
+        <div><div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand-35);margin-bottom:.3rem;">Style</div><div style="font-family:var(--font-serif);font-size:20px;font-weight:300;color:var(--sand);">Private</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem;">
+        <span class="tag">Heritage sites</span><span class="tag">Local guides</span><span class="tag">Temple circuits</span><span class="tag">Cultural immersion</span>
+      </div>
+      <button class="btn btn--primary" onclick="openQuiz()">Start planning →</button>
+    </div>
+  </section>
+
+  <!-- Journey 3 -->
+  <section style="display:grid;grid-template-columns:1fr 1fr;border-bottom:.5px solid var(--border);">
+    <div style="padding:4rem 3rem;border-right:.5px solid var(--border);">
+      <div class="journey-card__tag" style="margin-bottom:1.5rem;">Adventure &amp; wild</div>
+      <h2 style="font-family:var(--font-serif);font-size:clamp(36px,4vw,52px);font-weight:300;color:var(--sand);margin-bottom:1rem;line-height:1.08;">The <em style="font-style:italic;color:var(--gold);">Untamed Isle</em></h2>
+      <p style="font-size:14px;line-height:1.85;color:var(--sand-55);margin-bottom:2rem;font-weight:300;max-width:460px;">Yala on foot with a naturalist guide. Wild surf at Arugam Bay. Night camping in the Knuckles Range wilderness. Kitulgala's white water. The Ceylon that most travelers never find — raw, alive, and entirely yours.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem;padding:1.5rem;background:var(--gold-05);border:.5px solid var(--border);">
+        <div><div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand-35);margin-bottom:.3rem;">Duration</div><div style="font-family:var(--font-serif);font-size:20px;font-weight:300;color:var(--sand);">7–12 days</div></div>
+        <div><div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand-35);margin-bottom:.3rem;">From</div><div style="font-family:var(--font-serif);font-size:20px;font-weight:300;color:var(--gold);">$1,200</div></div>
+        <div><div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--sand-35);margin-bottom:.3rem;">Style</div><div style="font-family:var(--font-serif);font-size:20px;font-weight:300;color:var(--sand);">Active</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2rem;">
+        <span class="tag">Wildlife safaris</span><span class="tag">Highland trails</span><span class="tag">Surf coast</span><span class="tag">Wild camps</span>
+      </div>
+      <button class="btn btn--primary" onclick="openQuiz()">Start planning →</button>
+    </div>
+    <div style="padding:4rem 3rem;background:var(--forest-deep);">
+      <div style="font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--sand-25);margin-bottom:1.5rem;">Sample highlights</div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;"><div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Kitulgala</div><div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">White water rafting</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">Grade III–IV rapids, jungle night camp</div></div></div>
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;"><div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Knuckles</div><div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Range trek</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">UNESCO highland wilderness, endemic wildlife</div></div></div>
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;"><div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Yala</div><div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Leopard &amp; elephant safari</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">With a naturalist guide on foot at dawn</div></div></div>
+        <div style="padding:1.2rem 0;border-bottom:.5px solid var(--border);display:flex;gap:1rem;"><div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Arugam Bay</div><div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">East coast surf</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">World-class left-hander, local surf camp</div></div></div>
+        <div style="padding:1.2rem 0;display:flex;gap:1rem;"><div style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold-40);min-width:80px;padding-top:3px;">Trinco</div><div><div style="font-family:var(--font-serif);font-size:16px;color:var(--sand);margin-bottom:2px;">Diving &amp; whale watching</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">Pristine coral, blue whale sightings</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz CTA -->
+  <section class="section-pad" style="text-align:center;">
+    <div class="eyebrow eyebrow--center fade-up" style="margin-bottom:1.5rem;">Not sure which is yours?</div>
+    <h2 class="fade-up" style="font-family:var(--font-serif);font-size:clamp(32px,4vw,48px);font-weight:300;color:var(--sand);margin-bottom:1rem;">Take the quiz — <em style="font-style:italic;color:var(--gold);">five minutes</em></h2>
+    <p class="fade-up" style="font-size:14px;color:var(--sand-45);margin-bottom:2rem;max-width:400px;margin-left:auto;margin-right:auto;font-weight:300;">Answer five questions and we'll match you to the right journey and send a personal itinerary within 24 hours.</p>
+    <button class="btn btn--primary fade-up" onclick="openQuiz()">Find my journey →</button>
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding:2.5rem 3rem;border-top:.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+    <a href="../index.html" style="font-family:var(--font-serif);font-size:18px;font-weight:300;letter-spacing:.15em;color:var(--gold);text-transform:uppercase;">Sey<span style="font-style:italic;color:var(--sand);">lon</span></a>
+    <p style="font-size:10px;color:rgba(232,224,208,.2);">© 2026 Seylon. Colombo, Sri Lanka.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="quiz-modal" onclick="handleOverlayClick(event)">
+    <div class="modal">
+      <button class="modal__close" onclick="closeQuiz()">✕</button>
+      <div class="modal__inner">
+        <div id="modal-quiz-area">
+          <div class="eyebrow modal-quiz__eyebrow">Plan your journey</div>
+          <div class="modal-quiz__title" id="m-title"></div>
+          <div class="modal-quiz__hint"  id="m-hint"></div>
+          <div class="modal-quiz__progress" id="m-progress"></div>
+          <div class="modal-quiz__options"  id="m-options"></div>
+          <div class="modal-quiz__nav">
+            <button class="modal-quiz__back" id="m-back" onclick="quizBack()">← Back</button>
+            <button class="modal-quiz__next" id="m-next" onclick="quizNext()">Continue →</button>
+          </div>
+        </div>
+        <div class="modal-result" id="modal-result">
+          <div class="eyebrow" style="margin-bottom:1rem;">Your Seylon journey</div>
+          <div class="modal-result__title" id="r-title"></div>
+          <p   class="modal-result__desc"  id="r-desc"></p>
+          <div class="modal-result__tags"  id="r-tags"></div>
+          <div class="modal-result__actions">
+            <a href="#" class="btn btn--primary" id="r-cta">Request this itinerary →</a>
+            <button class="btn btn--ghost" onclick="quizRestart()">Retake quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

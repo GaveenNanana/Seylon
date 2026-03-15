@@ -1,0 +1,207 @@
+/* ============================================================
+   SEYLON — Modal & Quiz Overlay Styles
+   ============================================================ */
+
+/* Overlay */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 16, 12, 0.92);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modal-overlay.open { display: flex; }
+
+/* Modal box */
+.modal {
+  background: var(--forest);
+  border: 0.5px solid var(--border);
+  max-width: 680px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 20px;
+  color: var(--sand-35);
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color var(--transition);
+  line-height: 1;
+  z-index: 1;
+}
+
+.modal__close:hover { color: var(--sand); }
+
+.modal__inner { padding: 3rem; }
+
+/* Quiz inside modal */
+.modal-quiz__eyebrow { margin-bottom: 1rem; }
+
+.modal-quiz__title {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--sand);
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+}
+
+.modal-quiz__title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.modal-quiz__hint {
+  font-size: 12px;
+  color: var(--sand-35);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+/* Progress bar */
+.modal-quiz__progress {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 2rem;
+}
+
+.m-prog-dot {
+  height: 2px;
+  flex: 1;
+  background: var(--gold-12);
+  transition: background var(--transition);
+}
+
+.m-prog-dot.active { background: var(--gold); }
+
+/* Options grid */
+.modal-quiz__options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.m-opt {
+  padding: 1.1rem 1.2rem;
+  border: 0.5px solid var(--gold-20);
+  cursor: pointer;
+  transition: all var(--transition);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.m-opt:hover,
+.m-opt.sel {
+  border-color: var(--gold);
+  background: var(--gold-08);
+}
+
+.m-opt__title {
+  font-size: 13px;
+  color: var(--sand);
+  margin-bottom: 2px;
+  font-weight: 400;
+}
+
+.m-opt__desc {
+  font-size: 11px;
+  color: var(--sand-35);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Nav buttons */
+.modal-quiz__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-quiz__back {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sand-25);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition);
+  font-family: var(--font-sans);
+}
+
+.modal-quiz__back:hover { color: var(--sand); }
+
+.modal-quiz__next {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--forest);
+  background: var(--gold);
+  border: none;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  opacity: 0.4;
+  transition: opacity var(--transition);
+}
+
+.modal-quiz__next.ready { opacity: 1; }
+
+/* Result screen */
+.modal-result { display: none; }
+.modal-result.show { display: block; }
+
+.modal-result__title {
+  font-family: var(--font-serif);
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--sand);
+  line-height: 1.08;
+  margin-bottom: 0.75rem;
+}
+
+.modal-result__title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.modal-result__desc {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--sand-55);
+  margin-bottom: 1.75rem;
+  font-weight: 300;
+}
+
+.modal-result__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.modal-result__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .modal__inner { padding: 2rem 1.5rem; }
+  .modal-quiz__options { grid-template-columns: 1fr; }
+  .modal-quiz__title { font-size: 28px; }
+  .modal-result__title { font-size: 32px; }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Seylon</title>
+  <meta name="description" content="Get in touch with Seylon to start planning your bespoke Sri Lanka journey.">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/modal.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="navbar__logo">Sey<span>lon</span></a>
+    <ul class="navbar__links">
+      <li><a href="journeys.html">Journeys</a></li>
+      <li><a href="how-it-works.html">How it works</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="navbar__cta" onclick="openQuiz()">Begin your journey</button>
+    <button class="navbar__hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__close" onclick="closeMobileMenu()">✕</button>
+    <a href="journeys.html"     onclick="closeMobileMenu()">Journeys</a>
+    <a href="how-it-works.html" onclick="closeMobileMenu()">How it works</a>
+    <a href="about.html"        onclick="closeMobileMenu()">About</a>
+    <a href="contact.html"      onclick="closeMobileMenu()">Contact</a>
+  </div>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero__eyebrow eyebrow">Get in touch</div>
+    <h1 class="page-hero__title">Let's plan your <em>Ceylon journey</em></h1>
+    <p class="page-hero__body">Tell us what you're dreaming of. We'll come back to you within 24 hours with ideas, questions, and a first outline of your journey — no obligation, no sales pitch.</p>
+  </div>
+
+  <!-- Contact Content -->
+  <section style="display:grid;grid-template-columns:1fr 1fr;border-top:.5px solid var(--border);">
+
+    <!-- Form -->
+    <div style="padding:4rem 3rem;border-right:.5px solid var(--border);">
+      <div style="font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--sand-35);margin-bottom:2rem;">Send us a message</div>
+
+      <form id="contact-form" onsubmit="handleSubmit(event)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="first-name">First name</label>
+            <input class="form-input" type="text" id="first-name" name="first_name" placeholder="Sophie" required>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="last-name">Last name</label>
+            <input class="form-input" type="text" id="last-name" name="last_name" placeholder="Thompson" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email address</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="sophie@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="journey-type">Journey type</label>
+          <select class="form-select" id="journey-type" name="journey_type">
+            <option value="">I'm not sure yet — help me decide</option>
+            <option value="private-ceylon">The Private Ceylon — luxury &amp; romance</option>
+            <option value="ancient-way">The Ancient Way — culture &amp; heritage</option>
+            <option value="untamed-isle">The Untamed Isle — adventure &amp; wild</option>
+          </select>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="duration">Approximate duration</label>
+            <select class="form-select" id="duration" name="duration">
+              <option value="">Not sure yet</option>
+              <option value="5-7">5–7 days</option>
+              <option value="8-10">8–10 days</option>
+              <option value="11-14">11–14 days</option>
+              <option value="15+">15+ days</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom:0;">
+            <label class="form-label" for="travelers">Travelling as</label>
+            <select class="form-select" id="travelers" name="travelers">
+              <option value="">Select</option>
+              <option value="couple">Couple / partner</option>
+              <option value="solo">Solo</option>
+              <option value="friends">Friends group</option>
+              <option value="family">Family</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">What are you dreaming of?</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Tell us anything — a specific experience, a feeling you're after, places you've heard of, or simply that you want something you've never done before..." style="min-height:140px;"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary" style="width:100%;" id="submit-btn">Send inquiry →</button>
+
+        <div id="form-success" style="display:none;margin-top:1.5rem;padding:1.25rem;background:var(--gold-05);border:.5px solid var(--gold-20);">
+          <div style="font-family:var(--font-serif);font-size:20px;color:var(--sand);margin-bottom:.4rem;">We'll be in touch within 24 hours.</div>
+          <div style="font-size:12px;color:var(--sand-45);font-weight:300;">Thank you for reaching out. Your inquiry has been sent to hello@seylon.co — we look forward to planning your Ceylon journey.</div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Info -->
+    <div style="padding:4rem 3rem;background:var(--forest-deep);">
+      <div style="font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--sand-25);margin-bottom:2rem;">Or reach us directly</div>
+
+      <div style="margin-bottom:3rem;">
+        <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-40);margin-bottom:.4rem;">Email</div>
+        <a href="mailto:hello@seylon.co" style="font-family:var(--font-serif);font-size:24px;font-weight:300;color:var(--sand);transition:color .2s;">hello@seylon.co</a>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-40);margin-bottom:.4rem;">Based in</div>
+        <div style="font-family:var(--font-serif);font-size:20px;font-weight:300;color:var(--sand);">Colombo, Sri Lanka</div>
+        <div style="font-size:12px;color:var(--sand-35);margin-top:.25rem;">UTC+5:30 · We respond within 24 hours</div>
+      </div>
+
+      <div style="height:.5px;background:var(--border);margin:2.5rem 0;"></div>
+
+      <div style="font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--sand-25);margin-bottom:1.5rem;">What happens next</div>
+
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+        <div style="display:flex;gap:1rem;align-items:flex-start;">
+          <div style="font-family:var(--font-serif);font-size:18px;color:var(--gold);min-width:28px;line-height:1;">1</div>
+          <div><div style="font-size:13px;font-weight:500;color:var(--sand);margin-bottom:.2rem;">We read your inquiry carefully</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">Not a template response — a real person reads every message.</div></div>
+        </div>
+        <div style="display:flex;gap:1rem;align-items:flex-start;">
+          <div style="font-family:var(--font-serif);font-size:18px;color:var(--gold);min-width:28px;line-height:1;">2</div>
+          <div><div style="font-size:13px;font-weight:500;color:var(--sand);margin-bottom:.2rem;">We send a first outline within 24 hours</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">A rough itinerary and a few questions to sharpen the picture.</div></div>
+        </div>
+        <div style="display:flex;gap:1rem;align-items:flex-start;">
+          <div style="font-family:var(--font-serif);font-size:18px;color:var(--gold);min-width:28px;line-height:1;">3</div>
+          <div><div style="font-size:13px;font-weight:500;color:var(--sand);margin-bottom:.2rem;">We refine until it's exactly right</div><div style="font-size:12px;color:var(--sand-35);font-weight:300;">No pressure. No obligation. Just a journey taking shape.</div></div>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem;padding:1.5rem;background:var(--gold-05);border:.5px solid var(--border);">
+        <div style="font-family:var(--font-serif);font-size:18px;font-style:italic;color:var(--sand);margin-bottom:.5rem;">"Not a tour. A belonging."</div>
+        <div style="font-size:11px;color:var(--sand-35);letter-spacing:.05em;">— Seylon</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding:2.5rem 3rem;border-top:.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+    <a href="../index.html" style="font-family:var(--font-serif);font-size:18px;font-weight:300;letter-spacing:.15em;color:var(--gold);text-transform:uppercase;">Sey<span style="font-style:italic;color:var(--sand);">lon</span></a>
+    <p style="font-size:10px;color:rgba(232,224,208,.2);">© 2026 Seylon. Colombo, Sri Lanka.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="quiz-modal" onclick="handleOverlayClick(event)">
+    <div class="modal">
+      <button class="modal__close" onclick="closeQuiz()">✕</button>
+      <div class="modal__inner">
+        <div id="modal-quiz-area">
+          <div class="eyebrow modal-quiz__eyebrow">Plan your journey</div>
+          <div class="modal-quiz__title" id="m-title"></div>
+          <div class="modal-quiz__hint"  id="m-hint"></div>
+          <div class="modal-quiz__progress" id="m-progress"></div>
+          <div class="modal-quiz__options"  id="m-options"></div>
+          <div class="modal-quiz__nav">
+            <button class="modal-quiz__back" id="m-back" onclick="quizBack()">← Back</button>
+            <button class="modal-quiz__next" id="m-next" onclick="quizNext()">Continue →</button>
+          </div>
+        </div>
+        <div class="modal-result" id="modal-result">
+          <div class="eyebrow" style="margin-bottom:1rem;">Your Seylon journey</div>
+          <div class="modal-result__title" id="r-title"></div>
+          <p   class="modal-result__desc"  id="r-desc"></p>
+          <div class="modal-result__tags"  id="r-tags"></div>
+          <div class="modal-result__actions">
+            <a href="#" class="btn btn--primary" id="r-cta">Request this itinerary →</a>
+            <button class="btn btn--ghost" onclick="quizRestart()">Retake quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/quiz.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.textContent = 'Sending...';
+      btn.style.opacity = '0.6';
+      setTimeout(() => {
+        document.getElementById('contact-form').style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+        // In production: replace with actual form submission (Formspree, Netlify Forms etc.)
+        // window.location.href = 'mailto:hello@seylon.co?subject=Journey Inquiry&body=' + encodeURIComponent(getFormData());
+      }, 800);
+    }
+  </script>
+</body>
+</html>

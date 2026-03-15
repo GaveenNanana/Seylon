@@ -1,0 +1,70 @@
+<!-- ============================================================
+     SEYLON — Navigation Component
+     Include this at the top of every page's <body>
+     ============================================================ -->
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="navbar__logo">Sey<span>lon</span></a>
+
+  <ul class="navbar__links">
+    <li><a href="pages/journeys.html">Journeys</a></li>
+    <li><a href="pages/how-it-works.html">How it works</a></li>
+    <li><a href="pages/about.html">About</a></li>
+    <li><a href="pages/contact.html">Contact</a></li>
+  </ul>
+
+  <button class="navbar__cta" onclick="openQuiz()">Begin your journey</button>
+
+  <button class="navbar__hamburger" onclick="toggleMobileMenu()" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-menu__close" onclick="closeMobileMenu()" aria-label="Close menu">✕</button>
+  <a href="pages/journeys.html"     onclick="closeMobileMenu()">Journeys</a>
+  <a href="pages/how-it-works.html" onclick="closeMobileMenu()">How it works</a>
+  <a href="pages/about.html"        onclick="closeMobileMenu()">About</a>
+  <a href="pages/contact.html"      onclick="closeMobileMenu()">Contact</a>
+  <button class="btn btn--primary" onclick="openQuiz(); closeMobileMenu();" style="margin-top:1rem;">
+    Begin your journey
+  </button>
+</div>
+
+<!-- Quiz Modal -->
+<div class="modal-overlay" id="quiz-modal" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <button class="modal__close" onclick="closeQuiz()" aria-label="Close quiz">✕</button>
+    <div class="modal__inner">
+
+      <!-- Quiz questions area -->
+      <div id="modal-quiz-area">
+        <div class="modal-quiz__eyebrow eyebrow">Plan your journey</div>
+        <div class="modal-quiz__title" id="m-title">What draws you<br>to <em>Sri Lanka?</em></div>
+        <div class="modal-quiz__hint"  id="m-hint">Choose the one that speaks loudest to you.</div>
+        <div class="modal-quiz__progress" id="m-progress"></div>
+        <div class="modal-quiz__options"  id="m-options"></div>
+        <div class="modal-quiz__nav">
+          <button class="modal-quiz__back" id="m-back" onclick="quizBack()">← Back</button>
+          <button class="modal-quiz__next" id="m-next" onclick="quizNext()">Continue →</button>
+        </div>
+      </div>
+
+      <!-- Result area -->
+      <div class="modal-result" id="modal-result">
+        <div class="eyebrow" style="margin-bottom:1rem;">Your Seylon journey</div>
+        <div class="modal-result__title" id="r-title">The <em>Private Ceylon</em></div>
+        <p   class="modal-result__desc"  id="r-desc"></p>
+        <div class="modal-result__tags"  id="r-tags"></div>
+        <div class="modal-result__actions">
+          <a href="#" class="btn btn--primary" id="r-cta">Request this itinerary →</a>
+          <button class="btn btn--ghost" onclick="quizRestart()">Retake quiz</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

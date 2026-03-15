@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seylon — Curated Ceylon Journeys</title>
+  <meta name="description" content="Bespoke Sri Lanka travel journeys curated by a local. Not a package tour — a belonging.">
+  <meta property="og:title"       content="Seylon — Curated Ceylon Journeys">
+  <meta property="og:description" content="The island as it was meant to be discovered.">
+  <meta property="og:type"        content="website">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar__logo">Sey<span>lon</span></a>
+    <ul class="navbar__links">
+      <li><a href="pages/journeys.html">Journeys</a></li>
+      <li><a href="pages/how-it-works.html">How it works</a></li>
+      <li><a href="pages/about.html">About</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
+    <button class="navbar__cta" onclick="openQuiz()">Begin your journey</button>
+    <button class="navbar__hamburger" onclick="toggleMobileMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu__close" onclick="closeMobileMenu()">✕</button>
+    <a href="pages/journeys.html"     onclick="closeMobileMenu()">Journeys</a>
+    <a href="pages/how-it-works.html" onclick="closeMobileMenu()">How it works</a>
+    <a href="pages/about.html"        onclick="closeMobileMenu()">About</a>
+    <a href="pages/contact.html"      onclick="closeMobileMenu()">Contact</a>
+    <button class="btn btn--primary" onclick="openQuiz();closeMobileMenu();" style="margin-top:1rem;">Begin your journey</button>
+  </div>
+
+  <!-- Hero -->
+  <section id="hero" style="min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;">
+    <div class="hero-left" style="display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem 5rem;position:relative;z-index:2;">
+      <div class="eyebrow fade-up" style="margin-bottom:2rem;">Bespoke Sri Lanka journeys</div>
+      <h1 class="fade-up" style="font-family:var(--font-serif);font-size:clamp(52px,6vw,82px);font-weight:300;line-height:1.04;color:var(--sand);margin-bottom:2rem;">
+        The island<br>as it was<br><em style="font-style:italic;color:var(--gold);">meant to be</em><br>discovered
+      </h1>
+      <p class="fade-up" style="font-size:14px;line-height:1.85;color:var(--sand-55);max-width:380px;margin-bottom:3rem;font-weight:300;">
+        Curated journeys through Ceylon's ancient temples, mist-wrapped highlands, and spice-scented shores — designed around who you are, not where the crowds go.
+      </p>
+      <div class="fade-up" style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
+        <button class="btn btn--primary" onclick="openQuiz()">Begin your journey</button>
+        <a href="pages/journeys.html" class="btn btn--ghost">See journeys</a>
+      </div>
+    </div>
+    <div style="position:relative;overflow:hidden;">
+      <svg style="width:100%;height:100%;position:absolute;inset:0;" viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stop-color="#08120e"/>
+            <stop offset="40%"  stop-color="#16351e"/>
+            <stop offset="70%"  stop-color="#2a5228"/>
+            <stop offset="100%" stop-color="#182a18"/>
+          </linearGradient>
+          <linearGradient id="lf" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"  stop-color="#0e1a14"/>
+            <stop offset="40%" stop-color="rgba(14,26,20,0)"/>
+          </linearGradient>
+        </defs>
+        <rect width="600" height="900" fill="url(#skyG)"/>
+        <circle cx="80"  cy="50"  r="1.2" fill="rgba(255,255,255,.5)"/>
+        <circle cx="200" cy="30"  r="1"   fill="rgba(255,255,255,.4)"/>
+        <circle cx="340" cy="65"  r=".8"  fill="rgba(255,255,255,.5)"/>
+        <circle cx="470" cy="40"  r="1.2" fill="rgba(255,255,255,.35)"/>
+        <circle cx="150" cy="100" r=".8"  fill="rgba(255,255,255,.45)"/>
+        <path d="M480,260 L470,225 L466,175 L463,130 L460,108 L457,130 L453,172 L448,225 L438,260Z" fill="#0d2018" opacity=".85"/>
+        <rect x="456" y="93" width="9" height="18" fill="#1a3d26" opacity=".7" rx="1"/>
+        <path d="M0,400 L90,310 L180,360 L260,280 L340,320 L420,255 L500,295 L570,268 L600,282 L600,900 L0,900Z" fill="#112418"/>
+        <path d="M0,450 Q150,438 300,455 Q450,468 600,445 L600,900 L0,900Z" fill="#152e1a"/>
+        <path d="M0,480 Q100,468 250,485 Q400,498 600,475 L600,900 L0,900Z" fill="#193618"/>
+        <path d="M0,508 Q120,496 280,510 Q430,522 600,502 L600,900 L0,900Z" fill="#1e4020"/>
+        <path d="M20,492 Q150,484 280,496" stroke="rgba(40,80,35,.5)" stroke-width="1" fill="none"/>
+        <path d="M0,520 Q180,512 360,524 Q480,530 600,516" stroke="rgba(40,80,35,.4)" stroke-width="1" fill="none"/>
+        <path d="M0,590 Q80,568 160,588 Q210,572 280,592 Q340,574 410,592 L600,590 L600,900 L0,900Z" fill="#0c2012"/>
+        <path d="M0,640 Q100,618 190,638 Q310,640 450,640 L600,632 L600,900 L0,900Z" fill="#091a0e"/>
+        <circle cx="530" cy="155" r="70" fill="rgba(200,185,122,.05)"/>
+        <rect width="600" height="900" fill="url(#lf)"/>
+      </svg>
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,var(--forest) 0%,transparent 30%);"></div>
+      <div style="position:absolute;bottom:2.5rem;right:2rem;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(232,224,208,.3);writing-mode:vertical-rl;transform:rotate(180deg);">Ella highlands · Sri Lanka</div>
+    </div>
+    <div style="position:absolute;bottom:2.5rem;left:3rem;display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:.4;">
+      <div style="width:.5px;height:48px;background:var(--gold);animation:scrollPulse 2s ease-in-out infinite;"></div>
+      <div style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);">Scroll</div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat fade-up"><div class="stat__num">47</div><div class="stat__label">Curated experiences</div></div>
+    <div class="stat fade-up"><div class="stat__num">12</div><div class="stat__label">Trusted local partners</div></div>
+    <div class="stat fade-up"><div class="stat__num">100%</div><div class="stat__label">Independently curated</div></div>
+  </div>
+
+  <!-- Journeys -->
+  <section class="section-pad" id="journeys">
+    <div class="section-header fade-up">
+      <h2 class="section-title">Journeys crafted<br>for <em>the way you travel</em></h2>
+      <p class="section-desc">Three distinct ways to experience Ceylon — each designed for a different kind of soul.</p>
+    </div>
+    <div class="journeys-grid">
+      <div class="journey-card fade-up" onclick="window.location='pages/journeys.html'">
+        <div class="journey-card__tag">Romance &amp; luxury</div>
+        <h3 class="journey-card__name">The Private Ceylon</h3>
+        <p class="journey-card__desc">Colonial tea bungalows, sunset whale watching off Mirissa, private dinners within Galle Fort's ancient walls.</p>
+        <div class="journey-card__meta">
+          <div class="meta-item">Duration<span>8–14 days</span></div>
+          <div class="meta-item">From<span>$3,200</span></div>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+      <div class="journey-card fade-up" onclick="window.location='pages/journeys.html'">
+        <div class="journey-card__tag">Heritage &amp; culture</div>
+        <h3 class="journey-card__name">The Ancient Way</h3>
+        <p class="journey-card__desc">Sigiriya at dawn before the crowds. Sacred temples in Anuradhapura. Kandyan drum ceremonies at dusk.</p>
+        <div class="journey-card__meta">
+          <div class="meta-item">Duration<span>10–16 days</span></div>
+          <div class="meta-item">From<span>$1,800</span></div>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+      <div class="journey-card fade-up" onclick="window.location='pages/journeys.html'">
+        <div class="journey-card__tag">Adventure &amp; wild</div>
+        <h3 class="journey-card__name">The Untamed Isle</h3>
+        <p class="journey-card__desc">Yala on foot with a naturalist guide. Wild surf at Arugam Bay. Night camping in the Knuckles Range.</p>
+        <div class="journey-card__meta">
+          <div class="meta-item">Duration<span>7–12 days</span></div>
+          <div class="meta-item">From<span>$1,200</span></div>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section-pad" style="background:var(--forest-deep);border-top:.5px solid var(--border);border-bottom:.5px solid var(--border);">
+    <div style="text-align:center;margin-bottom:4.5rem;" class="fade-up">
+      <div class="eyebrow eyebrow--center" style="margin-bottom:1.2rem;">How it works</div>
+      <h2 style="font-family:var(--font-serif);font-size:clamp(32px,3.5vw,50px);font-weight:300;color:var(--sand);">
+        Your journey, <em style="font-style:italic;color:var(--gold);">thoughtfully built</em>
+      </h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step fade-up"><div class="step-dot">I</div><h3 class="step-title">Tell us your dream</h3><p class="step-text">A short quiz helps us understand how you travel — your pace, passions, and what you need to feel truly away.</p></div>
+      <div class="process-step fade-up"><div class="step-dot">II</div><h3 class="step-title">We design your route</h3><p class="step-text">Within 24 hours, your personal itinerary arrives — curated by a local, not an algorithm.</p></div>
+      <div class="process-step fade-up"><div class="step-dot">III</div><h3 class="step-title">Refine together</h3><p class="step-text">We adjust every detail until the journey feels unmistakably yours. No generic packages.</p></div>
+      <div class="process-step fade-up"><div class="step-dot">IV</div><h3 class="step-title">Travel with confidence</h3><p class="step-text">Trusted local partners, seamless logistics, and a direct line to us throughout your journey.</p></div>
+    </div>
+  </section>
+
+  <!-- Quiz CTA -->
+  <section class="section-pad quiz-section" id="quiz-section">
+    <div>
+      <div class="eyebrow fade-up" style="margin-bottom:1.5rem;">Start your journey</div>
+      <h2 class="fade-up" style="font-family:var(--font-serif);font-size:clamp(34px,4vw,52px);font-weight:300;line-height:1.1;color:var(--sand);margin-bottom:1.5rem;">
+        What kind of<br><em style="font-style:italic;color:var(--gold);">Ceylon calls to you?</em>
+      </h2>
+      <p class="fade-up" style="font-size:14px;line-height:1.8;color:var(--sand-45);font-weight:300;margin-bottom:2.5rem;max-width:380px;">
+        Answer five short questions and receive a personally curated itinerary within 24 hours.
+      </p>
+      <button class="btn btn--primary fade-up" onclick="openQuiz()">Take the quiz →</button>
+    </div>
+    <div class="quiz-widget fade-up">
+      <div class="quiz-prog-dots">
+        <div class="prog-dot active"></div><div class="prog-dot"></div>
+        <div class="prog-dot"></div><div class="prog-dot"></div><div class="prog-dot"></div>
+      </div>
+      <div class="quiz-q-label">Question 1 of 5</div>
+      <div class="quiz-question">What draws you to Sri Lanka most?</div>
+      <div class="quiz-options">
+        <div class="quiz-opt" onclick="selectPreviewOpt(this)">Ancient history</div>
+        <div class="quiz-opt" onclick="selectPreviewOpt(this)">Wild nature</div>
+        <div class="quiz-opt" onclick="selectPreviewOpt(this)">Beaches &amp; ocean</div>
+        <div class="quiz-opt" onclick="selectPreviewOpt(this)">Food &amp; culture</div>
+      </div>
+      <button class="btn btn--primary" style="width:100%;" onclick="openQuiz()">Start full quiz →</button>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="section-pad testimonial" style="border-top:.5px solid var(--border);">
+    <div class="quote-mark fade-up">"</div>
+    <p class="quote-text fade-up">We had been to fifteen countries, but nothing compared to the Ceylon that Seylon showed us. Hidden temples, a family that fed us like their own, a train through clouds. Not a single tourist bus in sight.</p>
+    <p class="quote-attr fade-up" style="margin-top:1.5rem;">— Sophie &amp; Marcus T., Amsterdam · The Ancient Way, 12 days</p>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-pad" style="border-top:.5px solid var(--border);">
+    <div class="cta-banner fade-up">
+      <div class="cta-banner__title">Ready to discover<br><em>the real Ceylon?</em></div>
+      <div class="cta-banner__actions">
+        <button class="btn btn--primary" onclick="openQuiz()">Begin your journey</button>
+        <a href="pages/contact.html" class="btn btn--ghost">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding:2.5rem 3rem;border-top:.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+    <div style="font-family:var(--font-serif);font-size:18px;font-weight:300;letter-spacing:.15em;color:var(--gold);text-transform:uppercase;">Sey<span style="font-style:italic;color:var(--sand);">lon</span></div>
+    <ul style="display:flex;gap:2rem;list-style:none;flex-wrap:wrap;">
+      <li><a href="pages/journeys.html"     style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--sand-25);">Journeys</a></li>
+      <li><a href="pages/how-it-works.html" style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--sand-25);">How it works</a></li>
+      <li><a href="pages/about.html"        style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--sand-25);">About</a></li>
+      <li><a href="pages/contact.html"      style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--sand-25);">Contact</a></li>
+    </ul>
+    <p style="font-size:10px;color:rgba(232,224,208,.2);letter-spacing:.05em;">© 2026 Seylon. Colombo, Sri Lanka.</p>
+  </footer>
+
+  <!-- Quiz Modal -->
+  <div class="modal-overlay" id="quiz-modal" onclick="handleOverlayClick(event)">
+    <div class="modal">
+      <button class="modal__close" onclick="closeQuiz()">✕</button>
+      <div class="modal__inner">
+        <div id="modal-quiz-area">
+          <div class="eyebrow modal-quiz__eyebrow">Plan your journey</div>
+          <div class="modal-quiz__title" id="m-title"></div>
+          <div class="modal-quiz__hint"  id="m-hint"></div>
+          <div class="modal-quiz__progress" id="m-progress"></div>
+          <div class="modal-quiz__options"  id="m-options"></div>
+          <div class="modal-quiz__nav">
+            <button class="modal-quiz__back" id="m-back" onclick="quizBack()">← Back</button>
+            <button class="modal-quiz__next" id="m-next" onclick="quizNext()">Continue →</button>
+          </div>
+        </div>
+        <div class="modal-result" id="modal-result">
+          <div class="eyebrow" style="margin-bottom:1rem;">Your Seylon journey</div>
+          <div class="modal-result__title" id="r-title"></div>
+          <p   class="modal-result__desc"  id="r-desc"></p>
+          <div class="modal-result__tags"  id="r-tags"></div>
+          <div class="modal-result__actions">
+            <a href="#" class="btn btn--primary" id="r-cta">Request this itinerary →</a>
+            <button class="btn btn--ghost" onclick="quizRestart()">Retake quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
